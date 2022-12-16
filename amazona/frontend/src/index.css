@@ -22,7 +22,7 @@ main {
   justify-content: center;
 }
 .rating span {
- color: #ffc000;
+  color: #ffc000;
 }
 .product {
   border: 1px #404040 solid;
@@ -34,4 +34,7 @@ main {
 }
 .product-info {
   padding: 1rem;
+}
+.img-large {
+  max-width: 100%;
 }
