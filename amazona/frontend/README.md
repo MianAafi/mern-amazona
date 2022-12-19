@@ -73,3 +73,24 @@
     1. create sign in form
     2. add email and password
     3. add signin button
+19. Connect To MongoDB Database
+    1. create atlas monogodb database
+    2. install local mongodb database
+    3. npm install mongoose
+    4. connect to mongodb database
+20. Seed Sample Products
+    1. create Product model
+    2. create seed route
+    3. use route in server.js
+    4. seed sample product
+21. Seed Sample Users
+    1. create user model
+    2. seed sample users
+22. Create Signin Backend API
+    1. create signin api
+    2. npm install jsonwebtoken
+    3. define generateToken
+23. Complete Signin Screen
+    1. handle submit action
+    2. save token in store and local storage
+    3. show user name in header

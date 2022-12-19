@@ -1,4 +1,4 @@
-import { useEffect, useReducer , useState } from 'react';
+import { useEffect, useReducer, useState } from 'react';
 import axios from 'axios';
 import logger from 'use-reducer-logger';
 import Row from 'react-bootstrap/Row';
@@ -22,7 +22,7 @@ const reducer = (state, action) => {
   }
 };
 function HomeScreen() {
-  const [{ loading, error, products }, dispatch] = useReducer (logger(reducer), {
+  const [{ loading, error, products }, dispatch] = useReducer(logger(reducer), {
     products: [],
     loading: true,
     error: '',
@@ -32,12 +32,10 @@ function HomeScreen() {
     const fetchData = async () => {
       try {
         const result = await axios.get('/api/products');
-        dispatch ({ type: 'FETCH_SUCCESS', payload: result.data });
+        dispatch({ type: 'FETCH_SUCCESS', payload: result.data });
       } catch (err) {
         dispatch({ type: 'FETCH_FAIL', payload: err.message });
-
       }
-
     };
     // setProducts(result.data);
     fetchData();
@@ -50,7 +48,7 @@ function HomeScreen() {
       <h1>Featured Products</h1>
       <div className="products">
         {loading ? (
-        <LoadingBox />
+          <LoadingBox />
         ) : error ? (
           <MessageBox variant="danger ">{error}</MessageBox>
         ) : (
